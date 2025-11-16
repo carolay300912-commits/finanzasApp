@@ -91,3 +91,5 @@ Finalmente, reiniciar el servidor y reconstruir la estructura de páginas corrig
 También al crear el proyecto venia por defecto tab1 el cual intente realizar el cambio y dejarlo como inicio pero al realizar los cambios correspondientes en cada parte del código donde llamaba dicho archivo tab1 y dejarlo como inicio también me arrojaba la pantalla en blanco, intente varias veces pero persistió tuve que dejar el archivo con ese nombre de la carpeta raíz pero a través del navegador cambio.
 
 Al final mi cascara quedo de la siguiente manera visualmente realice cambios para que se viera de manera mas profesional e importe iconos de ionic y con la ayuda de css.
+
+Aplicaion/Imagen1.png
