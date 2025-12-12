@@ -95,54 +95,61 @@ Al final mi cascara quedo de la siguiente manera visualmente realice cambios par
 Aplicaion/Imagen1.png
 
 
-Parte Parcial – Unidad 4
+
 En esta etapa del proyecto se implementa aproximadamente el 50% del funcionamiento principal de la aplicación, desarrollando las pantallas esenciales para el registro de ingresos, egresos y deudas. A partir de la estructura base (carcasa), se comienzan a integrar los componentes lógicos y funcionales.
-AgregarIngreso.tsx
+**AgregarIngreso.tsx**
 Se implementa la funcionalidad para registrar ingresos dentro de la aplicación.
 El módulo permite:
-Ingresar una descripción del ingreso
-Registrar el monto
-Seleccionar una fecha
-Guardar el ingreso de manera exitosa
-Mostrar la lista de ingresos registrados
-Eliminar ingresos cuando sea necesario
-Visualizar el total acumulado de ingresos
+Ingresar una descripción del ingres- o
+- Registrar el monto
+- Seleccionar una fecha
+- Guardar el ingreso de manera exitosa
+- Mostrar la lista de ingresos registrados
+- Eliminar ingresos cuando sea necesario
+- Visualizar el total acumulado de ingresos
 Todos los datos se almacenan en el estado interno del componente.
-AgregarEgresos.tsx
+**AgregarEgresos.tsx**
 De forma similar al módulo de ingresos, esta sección permite gestionar los egresos del usuario.
 Incluye:
-Descripción del egreso
-Monto
-Fecha
-Categoría
-Opción de guardar un egreso
-Opción de eliminar un egreso registrado
-Lista completa de egresos almacenados
-Cálculo automático del total de egresos
-AdminDeuda.tsx
+- Descripción del egreso
+- Monto
+- Fecha
+- Categoría
+- Opción de guardar un egreso
+- Opción de eliminar un egreso registrado
+- Lista completa de egresos almacenados
+- Cálculo automático del total de egresos
+
+**AdminDeuda.tsx**
 Este módulo gestiona el listado general de deudas registradas.
 Permite:
-Agregar nuevas deudas
-Visualizar el listado completo
-Eliminar deudas cuando sea necesario
-AgregarDeudaAdmin.tsx
+Agregar nuevas deuda- s
+- Visualizar el listado completo
+- Eliminar deudas cuando sea necesario
+
+**AgregarDeudaAdmin.tsx**
 Pantalla dedicada a la creación de nuevas deudas mediante un formulario completo.
 Campos disponibles:
-Nombre de la deuda
-Monto
-Fecha
-Observación
+- Nombre de la deuda
+- Monto
+- Fecha
+- Observación
+
 Cada registro se almacena automáticamente en localStorage, permitiendo persistencia de datos incluso al cerrar la aplicación.
 Almacenamiento de Datos
 Todos los ingresos, egresos y deudas quedan guardados en:
-localStorage, para asegurar persistencia
-Listas internas para visualización dinámica
-Totales calculados en tiempo real
+- localStorage, para asegurar persistencia
+- Listas internas para visualización dinámica
+- Totales calculados en tiempo real
+
 Estado del Proyecto
 Con estas funcionalidades implementadas, la aplicación cuenta con:
-Gestión completa de ingresos
-Gestión completa de egresos
-Administración de deudas
-Persistencia local de la información
-Cálculos en tiempo real
+
+- Gestión completa de ingresos
+- Gestión completa de egresos
+- Administración de deudas
+- Persistencia local de la información
+- Cálculos en tiempo real
+
 Esto representa aproximadamente el 50% del avance general del proyecto.
+
