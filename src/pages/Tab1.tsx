@@ -7,6 +7,7 @@ import {
   IonTitle,
   IonContent,
   IonIcon,
+  IonRouterLink,
 } from "@ionic/react";
 
 import {
@@ -38,7 +39,7 @@ export default function Inicio() {
 
         <div style={{ padding: "20px" }}>
 
-          {/* TITULO PRINCIPAL */}
+          {/* TÍTULO PRINCIPAL */}
           <h2 style={{ fontWeight: "700", marginBottom: "16px" }}>
             ¿Qué deseas gestionar hoy?
           </h2>
@@ -53,67 +54,60 @@ export default function Inicio() {
           >
 
             {/* CARD: INGRESOS */}
-            <div
-              onClick={() => (window.location.href = "/AgregarIngreso")}
-              style={cardStyle}
-            >
-              <IonIcon icon={trendingUpOutline} style={iconStyle} />
-              <span style={textStyle}>Ingresos</span>
-            </div>
+            <IonRouterLink routerLink="/agregar-ingreso" style={{ textDecoration: "none" }}>
+              <div style={cardStyle}>
+                <IonIcon icon={trendingUpOutline} style={iconStyle} />
+                <span style={textStyle}>Ingresos</span>
+              </div>
+            </IonRouterLink>
 
-            {/* CARD: GASTOS */}
-            <div
-              onClick={() => (window.location.href = "/AgregarGasto")}
-              style={cardStyle}
-            >
-              <IonIcon icon={trendingDownOutline} style={iconStyle} />
-              <span style={textStyle}>Gastos</span>
-            </div>
+            {/* CARD: GASTOS FALTAAAA */}
+            <IonRouterLink routerLink="/agregar-egreso" style={{ textDecoration: "none" }}>
+              <div style={cardStyle}>
+                <IonIcon icon={trendingDownOutline} style={iconStyle} />
+                <span style={textStyle}>Gastos</span>
+              </div>
+            </IonRouterLink>
 
             {/* CARD: AHORROS */}
-            <div
-              onClick={() => (window.location.href = "/Ahorros")}
-              style={cardStyle}
-            >
-              <IonIcon icon={cashOutline} style={iconStyle} />
-              <span style={textStyle}>Ahorros</span>
-            </div>
+            <IonRouterLink routerLink="/agregar-ahorro" style={{ textDecoration: "none" }}>
+              <div style={cardStyle}>
+                <IonIcon icon={cashOutline} style={iconStyle} />
+                <span style={textStyle}>Ahorros</span>
+              </div>
+            </IonRouterLink>
 
             {/* ADMINISTRAR DEUDA */}
-            <div
-              onClick={() => (window.location.href = "/AdministrarDeuda")}
-              style={cardStyle}
-            >
-              <IonIcon icon={cardOutline} style={iconStyle} />
-              <span style={textStyle}>Admin. Deuda</span>
-            </div>
+            <IonRouterLink routerLink="/admin-deuda" style={{ textDecoration: "none" }}>
+              <div style={cardStyle}>
+                <IonIcon icon={cardOutline} style={iconStyle} />
+                <span style={textStyle}>Admin. Deuda</span>
+              </div>
+            </IonRouterLink>
 
             {/* DEUDA */}
-            <div
-              onClick={() => (window.location.href = "/Deuda")}
-              style={cardStyle}
-            >
-              <IonIcon icon={addCircleOutline} style={iconStyle} />
-              <span style={textStyle}>Deuda</span>
-            </div>
+            <IonRouterLink routerLink="/Deuda" style={{ textDecoration: "none" }}>
+              <div style={cardStyle}>
+                <IonIcon icon={addCircleOutline} style={iconStyle} />
+                <span style={textStyle}>Deuda</span>
+              </div>
+            </IonRouterLink>
 
             {/* INFORMES */}
-            <div
-              onClick={() => (window.location.href = "/Informes")}
-              style={cardStyle}
-            >
-              <IonIcon icon={documentTextOutline} style={iconStyle} />
-              <span style={textStyle}>Informes</span>
-            </div>
+            <IonRouterLink routerLink="/Informes" style={{ textDecoration: "none" }}>
+              <div style={cardStyle}>
+                <IonIcon icon={documentTextOutline} style={iconStyle} />
+                <span style={textStyle}>Informes</span>
+              </div>
+            </IonRouterLink>
 
             {/* NOTIFICACIONES */}
-            <div
-              onClick={() => (window.location.href = "/Notificaciones")}
-              style={cardStyle}
-            >
-              <IonIcon icon={notificationsOutline} style={iconStyle} />
-              <span style={textStyle}>Notificaciones</span>
-            </div>
+            <IonRouterLink routerLink="/Notificaciones" style={{ textDecoration: "none" }}>
+              <div style={cardStyle}>
+                <IonIcon icon={notificationsOutline} style={iconStyle} />
+                <span style={textStyle}>Notificaciones</span>
+              </div>
+            </IonRouterLink>
 
           </div>
         </div>
@@ -122,28 +116,27 @@ export default function Inicio() {
   );
 }
 
-/* ------------------ ESTILOS MODERNOS ------------------ */
-
+/* ESTILOS */
 const cardStyle: React.CSSProperties = {
-  backgroundColor: "#ffffff",
-  padding: "18px",
-  borderRadius: "16px",
-  boxShadow: "0 4px 10px rgba(0,0,0,0.08)",
+  background: "white",
+  borderRadius: "12px",
+  padding: "24px",
+  textAlign: "center",
+  boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
   justifyContent: "center",
-  cursor: "pointer",
-  transition: "0.2s",
 };
 
 const iconStyle: React.CSSProperties = {
   fontSize: "32px",
+  marginBottom: "8px",
   color: "#3880ff",
-  marginBottom: "6px",
 };
 
 const textStyle: React.CSSProperties = {
-  fontSize: "15px",
   fontWeight: "600",
+  fontSize: "16px",
+  color: "#000",
 };

@@ -1,4 +1,4 @@
-import { Redirect, Route } from 'react-router-dom';
+import { Redirect, Route } from "react-router-dom";
 import {
   IonApp,
   IonIcon,
@@ -7,43 +7,44 @@ import {
   IonTabBar,
   IonTabButton,
   IonTabs,
-  setupIonicReact
-} from '@ionic/react';
-import { IonReactRouter } from '@ionic/react-router';
-import { ellipse, square, triangle,} from 'ionicons/icons';
-import { home, homeOutline } from "ionicons/icons";
+  setupIonicReact,
+} from "@ionic/react";
+import { IonReactRouter } from "@ionic/react-router";
 
-import Tab1 from './pages/Tab1';
+import { home, addCircle, wallet } from "ionicons/icons";
+
+// Pages
+import Tab1 from "./pages/Tab1";
+import AgregarIngreso from "./pages/AgregarIngreso";
+import AgregarAhorro from "./pages/AgregarAhorro";
+import AgregarEgreso from "./pages/AgregarEgreso";
+import AdminDeuda from "./pages/AdminDeuda";
+import AgregarDeudaAdmin from "./pages/AgregarDeudaAdmin";
+import Deuda from "./pages/Deuda";
+import Informes from "./pages/Informes";
+
 
 /* Core CSS required for Ionic components to work properly */
-import '@ionic/react/css/core.css';
+import "@ionic/react/css/core.css";
 
 /* Basic CSS for apps built with Ionic */
-import '@ionic/react/css/normalize.css';
-import '@ionic/react/css/structure.css';
-import '@ionic/react/css/typography.css';
+import "@ionic/react/css/normalize.css";
+import "@ionic/react/css/structure.css";
+import "@ionic/react/css/typography.css";
 
-/* Optional CSS utils that can be commented out */
-import '@ionic/react/css/padding.css';
-import '@ionic/react/css/float-elements.css';
-import '@ionic/react/css/text-alignment.css';
-import '@ionic/react/css/text-transformation.css';
-import '@ionic/react/css/flex-utils.css';
-import '@ionic/react/css/display.css';
+/* Optional CSS utils */
+import "@ionic/react/css/padding.css";
+import "@ionic/react/css/float-elements.css";
+import "@ionic/react/css/text-alignment.css";
+import "@ionic/react/css/text-transformation.css";
+import "@ionic/react/css/flex-utils.css";
+import "@ionic/react/css/display.css";
 
-/**
- * Ionic Dark Mode
- * -----------------------------------------------------
- * For more info, please see:
- * https://ionicframework.com/docs/theming/dark-mode
- */
-
-/* import '@ionic/react/css/palettes/dark.always.css'; */
-/* import '@ionic/react/css/palettes/dark.class.css'; */
-import '@ionic/react/css/palettes/dark.system.css';
+/* Dark theme (system-based) */
+import "@ionic/react/css/palettes/dark.system.css";
 
 /* Theme variables */
-import './theme/variables.css';
+import "./theme/variables.css";
 
 setupIonicReact();
 
@@ -52,18 +53,61 @@ const App: React.FC = () => (
     <IonReactRouter>
       <IonTabs>
         <IonRouterOutlet>
+
+          {/* --- INICIO --- */}
           <Route exact path="/Inicio">
             <Tab1 />
           </Route>
+
+          {/* --- AGREGAR INGRESO --- */}
+          <Route exact path="/agregar-ingreso">
+            <AgregarIngreso />
+          </Route>
+
+          <Route exact path="/agregar-ahorro">
+  <AgregarAhorro />
+</Route>
+
+<Route exact path="/agregar-egreso">
+  <AgregarEgreso />
+</Route>
+
+<Route exact path="/admin-deuda">
+  <AdminDeuda />
+</Route>
+
+<Route exact path="/agregar-deuda-admin">
+  <AgregarDeudaAdmin />
+</Route>
+
+<Route exact path="/deuda">
+  <Deuda />
+</Route>
+
+<Route exact path="/informes">
+  <Informes />
+</Route>
+
+
+
+
+          {/* REDIRECCIÓN */}
           <Route exact path="/">
             <Redirect to="/Inicio" />
           </Route>
+
+  
+ 
         </IonRouterOutlet>
+
+        {/* TAB BAR (MENÚ INFERIOR) */}
         <IonTabBar slot="bottom">
+
           <IonTabButton tab="inicio" href="/Inicio">
-            <IonIcon aria-hidden="true" icon={home} />
+            <IonIcon icon={home} />
             <IonLabel>Inicio</IonLabel>
           </IonTabButton>
+
         </IonTabBar>
       </IonTabs>
     </IonReactRouter>
@@ -71,3 +115,4 @@ const App: React.FC = () => (
 );
 
 export default App;
+
