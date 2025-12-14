@@ -153,3 +153,73 @@ Con estas funcionalidades implementadas, la aplicación cuenta con:
 
 Esto representa aproximadamente el 50% del avance general del proyecto.
 
+
+**Parte B de la unidad 4**
+En esta segunda etapa del desarrollo de FinanzasApp se implementaron completamente los módulos de Ahorros, Administración de Deudas, Informes y Notificaciones, alcanzando más del 50% del contenido funcional de la aplicación, cumpliendo con los requisitos establecidos para esta entrega.
+Todas las funcionalidades descritas a continuación se encuentran operativas dentro de la aplicación y accesibles mediante la navegación principal.
+Se agregan lo siguiente:
+**AgregarAhorro.tsx :**
+• Registro de ahorros mediante formulario
+• Campos incluidos:
+• Descripción
+• Monto
+• Fecha
+• Listado dinámico de ahorros ingresados
+​​• Cálculo automático del total acumulado
+• Eliminación de ahorros registrados
+
+**Deuda.tsx:**
+
+• Nombre de la deuda
+• Monto
+• Fecha
+• Observación
+• Visualización del listado de deudas
+• Eliminación de deudas individuales
+• Cálculo del total de deuda acumulada
+
+**Infomes.tsx:**
+Visualización consolidada de:
+• Total de ingresos
+• Total de egresos
+• Total de ahorros
+• Total de deudas
+• Filtro de datos por rango de fechas
+• Representación gráfica de la información financiera
+• Resumen general del estado financiero del usuario
+
+**Notificaciones.tsx: **Generación automática de notificaciones al:
+• Registrar ingresos
+• Registrar egresos
+• Registrar ahorros
+• Registrar deudas
+• Visualización del historial de notificaciones
+• Cada notificación incluye:
+• Mensaje descriptivo
+• Fecha y hora del evento
+
+**Lo que se implemento:**
+
+Lectura de datos desde localStorage.
+Cálculo de totales mediante funciones de reducción (reduce).
+Uso de librería externa para gráficos, recharts que es una librería para reaccionar el cual realice la respectiva instalación.
+Componentes visuales desacoplados para facilitar el mantenimiento.
+
+**Problemas enfrentados y soluciones aplicadas**
+
+Problema 1: Pantallas en blanco al navegar
+Causa: rutas no declaradas correctamente en App.tsx y uso incorrecto de navegación con window.location.href.
+Solución: uso correcto de IonReactRouter, Route y routerLink.
+
+Problema 2: Conflictos con TypeScript
+Causa: tipos incorrectos al manejar eventos y estados.
+Solución: definición específica de tipos (número, cadena, interfaces personalizadas).
+
+Problema 3: Persistencia de datos entre pantallas
+Causa: pérdida de información al recargar la aplicación.
+Solución: implementación de localStorage para mantener los datos durante la sesión.
+
+**Conclusión:**
+La implementación de los módulos avanzados permitió transformar FinanzasApp en una aplicación funcional de gestión financiera personal.
+El desarrollo cumplió con los requisitos técnicos, de navegación y contenido solicitados, demostrando el correcto uso del framework Ionic con React y buenas prácticas de desarrollo.
+
