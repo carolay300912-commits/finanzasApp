@@ -22,6 +22,7 @@ import AdminDeuda from "./pages/AdminDeuda";
 import AgregarDeudaAdmin from "./pages/AgregarDeudaAdmin";
 import Deuda from "./pages/Deuda";
 import Informes from "./pages/Informes";
+import Notificaciones from "./pages/Notificaciones";
 
 
 /* Core CSS required for Ionic components to work properly */
@@ -31,6 +32,7 @@ import "@ionic/react/css/core.css";
 import "@ionic/react/css/normalize.css";
 import "@ionic/react/css/structure.css";
 import "@ionic/react/css/typography.css";
+
 
 /* Optional CSS utils */
 import "@ionic/react/css/padding.css";
@@ -64,14 +66,17 @@ const App: React.FC = () => (
             <AgregarIngreso />
           </Route>
 
+ {/* --- AGREGAR AHORRO --- */}
           <Route exact path="/agregar-ahorro">
   <AgregarAhorro />
 </Route>
 
+ {/* --- AGREGAR EGRESO --- */}
 <Route exact path="/agregar-egreso">
   <AgregarEgreso />
 </Route>
 
+ {/* --- AGREGAR DEUDA --- */}
 <Route exact path="/admin-deuda">
   <AdminDeuda />
 </Route>
@@ -84,6 +89,7 @@ const App: React.FC = () => (
   <Deuda />
 </Route>
 
+ {/* --- AGREGAR INFORMES --- */}
 <Route exact path="/informes">
   <Informes />
 </Route>

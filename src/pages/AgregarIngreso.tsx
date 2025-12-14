@@ -23,6 +23,7 @@ interface Ingreso {
   fecha: string;
 }
 
+
 export default function AgregarIngreso() {
   const [descripcion, setDescripcion] = useState("");
   const [monto, setMonto] = useState("");
@@ -66,7 +67,7 @@ export default function AgregarIngreso() {
     syncLocalStorage(filtrados);
   };
 
-  // 👉 Total correctamente calculado
+  // Total correctamente calculado
   const totalIngresos = ingresos.reduce((acc, ing) => acc + Number(ing.monto), 0);
 
   return (
@@ -170,3 +171,4 @@ export default function AgregarIngreso() {
     </IonPage>
   );
 }
+
