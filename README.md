@@ -94,7 +94,7 @@ Al final mi cascara quedo de la siguiente manera visualmente realice cambios par
 
 Aplicaion/Imagen1.png
 
-
+**Parte A de la Unidad 4**
 
 En esta etapa del proyecto se implementa aproximadamente el 50% del funcionamiento principal de la aplicación, desarrollando las pantallas esenciales para el registro de ingresos, egresos y deudas. A partir de la estructura base (carcasa), se comienzan a integrar los componentes lógicos y funcionales.
 **AgregarIngreso.tsx**
